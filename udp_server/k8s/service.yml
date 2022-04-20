@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-udp-shenzhen
+  namespace: infra
+spec:
+  ports:
+    - name: server
+      port: 3333
+      targetPort: 3333
+      protocol: UDP
+  selector:
+    app: test-udp-shenzhen
